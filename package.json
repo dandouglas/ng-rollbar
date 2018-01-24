@@ -1,18 +1,18 @@
 {
   "name": "ng-rollbar-dd",
-  "version": "2.3.8",
+  "version": "2.4.0-1",
   "description": "Rollbar integration for angular which automatically sends $log errors to Rollbar",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dandouglas/ng-rollbar"
+    "url": "https://github.com/dandouglas/ng-rollbar-dd"
   },
   "author": "Daniel Douglas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dandouglas/ng-rollbar/issues"
+    "url": "https://github.com/dandouglas/ng-rollbar-dd/issues"
   },
-  "homepage": "https://github.com/dandouglas/ng-rollbar",
+  "homepage": "https://github.com/dandouglas/ng-rollbar-dd",
   "devDependencies": {
     "angular": "^1.5.5",
     "angular-mocks": "^1.5.5",
