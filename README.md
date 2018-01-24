@@ -10,9 +10,9 @@ As rollbar encourages all users to stay up to date, and we can't easily track th
 Installation
 ------------
 
-You can use [bower](http://bower.io/) to install this frontend dependency: `bower install ng-rollbar --save`
+You can use [bower](http://bower.io/) to install this frontend dependency: `bower install ng-rollbar-dd --save`
 
-Or you can just clone this repo: `git clone https://github.com/dandouglas/ng-rollbar`
+Or you can just clone this repo: `git clone https://github.com/dandouglas/ng-rollbar-dd`
 
 Usage
 -----
