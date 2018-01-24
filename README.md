@@ -1,6 +1,8 @@
 ng-rollbar
 ==========
 
+This is a fork of ng-rollbar by [tandibar](https://github.com/tandibar).  This fork contains a decorator of Angular's $log function which logs errors to the console as well as sends them to configured Rollbar account.
+
 [Rollbar](https://rollbar.com/) integration for [AngularJS](https://angularjs.org/)
 
 As rollbar encourages all users to stay up to date, and we can't easily track their versioning with our own, please look at release notes if you need to use an older version, otherwise we always deploy with the latest commit in the rollbar.js master branch.
@@ -10,7 +12,7 @@ Installation
 
 You can use [bower](http://bower.io/) to install this frontend dependency: `bower install ng-rollbar --save`
 
-Or you can just clone this repo: `git clone https://github.com/tandibar/ng-rollbar.git`
+Or you can just clone this repo: `git clone https://github.com/dandouglas/ng-rollbar`
 
 Usage
 -----
@@ -26,7 +28,7 @@ Add the library into your application:
 Add the module as dependency to your angular app:
 
 ```javascript
-angular.module('myApp', ['tandibar/ng-rollbar', ...])
+angular.module('myApp', ['ng-rollbar-dd', ...])
 ```
 
 ### Initialize
@@ -138,7 +140,9 @@ The `event` parameter in the listener is the representation of the Angular event
 How it works
 ------------
 
-The library decorates angulars `$exceptionHandler` with a call to `Rollbar.error` with the catched exception and the cause.
+The library decorates Angulars `$exceptionHandler` with a call to `Rollbar.error` with the catched exception and the cause.
+
+It also decorates Angulars '$log' provider and makes a call to `Rolbar.error`.
 
 
 License

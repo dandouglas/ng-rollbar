@@ -36,7 +36,7 @@ describe('[ng-rollbar Module]', function() {
     }));
 
     // Instantiate the module
-    beforeEach(module('tandibar/ng-rollbar'));
+    beforeEach(module('ng-rollbar-dd'));
 
     // Capture a reference to the exception handler
     beforeEach(inject(function(_$exceptionHandler_) {
@@ -49,7 +49,7 @@ describe('[ng-rollbar Module]', function() {
 
     describe('When initializing the module', function() {
         it('should declare the module object', function() {
-            expect(typeof angular.module('tandibar/ng-rollbar')).toEqual('object');
+            expect(typeof angular.module('ng-rollbar-dd')).toEqual('object');
         });
     });
 

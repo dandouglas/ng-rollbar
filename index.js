@@ -1,2 +1,2 @@
 require('./ng-rollbar.js');
-module.exports = 'tandibar/ng-rollbar';
+module.exports = 'ng-rollbar-dd';

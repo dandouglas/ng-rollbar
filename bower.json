@@ -1,17 +1,18 @@
 {
-  "name": "ng-rollbar",
+  "name": "ng-rollbar-dd",
   "main": "ng-rollbar.js",
-  "version": "2.3.6",
-  "homepage": "https://github.com/tandibar/ng-rollbar",
+  "version": "2.4.0",
+  "homepage": "https://github.com/dandouglas/ng-rollbar",
   "authors": [
-    "Andreas Bade <andreas.bade@identpro.de>"
+    "Daniel Douglas"
   ],
   "description": "AngularJS integration for Rollbar",
   "keywords": [
     "rollbar",
     "angular",
     "angularjs",
-    "exception handling"
+    "exception",
+    "handling"
   ],
   "license": "MIT",
   "ignore": [
@@ -20,6 +21,7 @@
     "test",
     "tests",
     "Gruntfile",
-    "package.json"
+    "package.json",
+    "bower_components"
   ]
 }
