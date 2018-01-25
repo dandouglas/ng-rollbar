@@ -1,6 +1,6 @@
 {
   "name": "ng-rollbar-dd",
-  "version": "2.4.0-1",
+  "version": "2.4.0",
   "description": "Rollbar integration for angular which automatically sends $log errors to Rollbar",
   "main": "index.js",
   "repository": {
