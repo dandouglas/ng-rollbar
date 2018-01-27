@@ -3,8 +3,8 @@
  * decorator logic.
  */
 
-describe('[ng-rollbar Module]', function() {
-    var $exceptionHandler;
+describe('[ng-rollbar-dd Module]', function() {
+    var $exceptionHandler, $log;
 
     var $rootScopeSpy,
         $windowMock,
@@ -27,6 +27,12 @@ describe('[ng-rollbar Module]', function() {
             return $windowMock;
         });
 
+        // Log Spy
+        $provide.service('$log', function() {
+            $logSpy = jasmine.createSpyObj('$log', ['error', 'debug', 'warn', 'info']);
+            return $logSpy;
+        });
+
         // Rollbar spy
         RollbarSpy = jasmine.createSpyObj('Rollbar', ['error']);
 
@@ -39,8 +45,9 @@ describe('[ng-rollbar Module]', function() {
     beforeEach(module('ng-rollbar-dd'));
 
     // Capture a reference to the exception handler
-    beforeEach(inject(function(_$exceptionHandler_) {
+    beforeEach(inject(function(_$exceptionHandler_, _$log_) {
         $exceptionHandler = _$exceptionHandler_;
+        $log = _$log_;
     }));
 
     /***************
@@ -74,6 +81,25 @@ describe('[ng-rollbar Module]', function() {
 
         it('should emit a rollbar event on $rootScope', function() {
             expect($rootScopeSpy.$emit).toHaveBeenCalledWith('rollbar:exception', eventMock);
+        });
+    });
+
+    describe('when logging an error to the console through $log', function(){
+        it('should log the error via Rollbar', function() {        
+            $log.error('');
+            expect(RollbarSpy.error).toHaveBeenCalled();
+        });
+
+        it('should still log the error to the console', function() {        
+            $log.error('');
+            expect($logSpy.error).toHaveBeenCalled();
+        });
+
+        it('should not send debug, info or warn messages to Rollbar', function() {        
+            $log.debug('');
+            $log.warn('');
+            $log.info('');
+            expect(RollbarSpy.error).not.toHaveBeenCalled();
         });
     });
 
