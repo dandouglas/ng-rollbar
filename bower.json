@@ -1,7 +1,7 @@
 {
   "name": "ng-rollbar-dd",
   "main": "ng-rollbar.js",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "homepage": "https://github.com/dandouglas/ng-rollbar-dd",
   "authors": [
     "Daniel Douglas"
