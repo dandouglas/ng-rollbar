@@ -37,7 +37,7 @@
             $delegate.warn.apply($delegate, arguments);
           },
           debug: function () {
-            $delegate.warn.apply($delegate, arguments);
+            $delegate.debug.apply($delegate, arguments);
           }
         };
       }
