@@ -1,9 +1,9 @@
 ng-rollbar
 ==========
 
-[Rollbar](https://rollbar.com/) integration for [AngularJS](https://angularjs.org/)
+[Rollbar](https://rollbar.com/) integration for [AngularJS](https://angularjs.org/)/[Ionic 1](https://ionicframework.com/) applications.
 
-Please not this is a fork of [ng-rollbar](https://github.com/tandibar/ng-rollbar.git) by [tandibar](https://github.com/tandibar).  This fork contains a decorator of Angular's $log function which logs errors to the console as well as sends them to configured Rollbar account.
+Please not this is a fork of [ng-rollbar](https://github.com/tandibar/ng-rollbar.git) by [tandibar](https://github.com/tandibar).  This fork contains a decorator of Angular's $log function which logs errors to the console as well as sends them to configured Rollbar account.  The reason I made this fork was because I wanted to capture error logs from a number or ionic mobile apps.
 
 
 Installation
